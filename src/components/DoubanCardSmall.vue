@@ -1,11 +1,13 @@
 <template>
-    <div class="v0_3" id="cardRoot"><span class="v0_4">今年{{verb}}过{{doubanStats["2022"][type]}} {{measure}} </span>
-        <div class="v0_5"></div>
-        <div class="v0_6"><span class="v0_7">总共{{verb}}过 {{doubanStats["total_data"][type]}} {{measure}} </span>
-            <div class="v0_8">
-                <div class="v0_9"></div>
-            </div>
+    <div class="doubanSmallCardRoot" id="cardRoot">
+      <span class="yearTextview">今年{{verb}}过{{doubanStats["2022"][type]}} {{measure}} </span>
+      <div class="slashLine"></div>
+      <div class="footerContainer">
+        <span class="totalTextview">总共{{verb}}过 {{doubanStats["total_data"][type]}} {{measure}} </span>
+        <div class="svgContainer">
+          <div class="svgObj"></div>
         </div>
+      </div>
     </div>
 </template>
 
@@ -30,7 +32,7 @@ export default {
 body {
   font-size: 14px;
 }
-.v0_3 {
+.doubanSmallCardRoot {
   width: 169px;
   height: 169px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #60A95C;
@@ -44,7 +46,7 @@ body {
   border-bottom-right-radius: 14px;
   overflow: hidden;
 }
-.v0_4 {
+.yearTextview {
   width: 141px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -57,9 +59,8 @@ body {
   opacity: 1;
   text-align: left;
 }
-.v0_5 {
+.slashLine {
   width: 24px;
-  /* background: url("../images/v0_5.png"); */
   opacity: 1;
   position: absolute;
   top: 112px;
@@ -67,10 +68,9 @@ body {
   border: 1px solid rgba(255,255,255,0.48);
 }
 
-.v0_6 {
+.footerContainer {
   width: 141px;
   height: 24px;
-  /* background: url("../images/v0_6.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -80,7 +80,7 @@ body {
   left: 14px;
   overflow: hidden;
 }
-.v0_7 {
+.totalTextview {
   width: 105px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -92,7 +92,7 @@ body {
   opacity: 1;
   text-align: left;
 }
-.v0_8 {
+.svgContainer {
   width: 24px;
   height: 24px;
   background: rgba(255,255,255,1);
@@ -106,7 +106,7 @@ body {
   border-bottom-right-radius: 6px;
   overflow: hidden;
 }
-.v0_9 {
+.svgObj {
   width: 14px;
   height: 14px;
   background: url("../assets/douban_icon_small.svg");
