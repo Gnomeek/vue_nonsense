@@ -1,12 +1,14 @@
 <template>
-    <div class="v0_3" id="cardRoot"><span class="v0_4">本周骑行{{stravaStats["distance"]}}<span font-size=25px> 千米</span> </span>
-        <div class="v0_5"></div>
-        <div class="v0_6"><span class="v0_7">共计爬升{{stravaStats["elvation"]}}<span font-size=12px>米 </span></span>
-            <div class="v0_8">
-                <div class="v0_9"></div>
-            </div>
-        </div>
+  <div class="stravaCardRoot">
+    <div class="dataContainer">
+      <div class="distanceTextView"><span class="distanceText">距离</span><span class="distanceData">{{stravaStats["distance"]}}</span></div>
+      <div class="timeTextView"><span class="timeText">时间</span><span class="timeData">{{stravaStats["time"]}}</span></div>
+      <div class="elvationTextView"><span class="elvationText">海拔</span><span class="elvationData">{{stravaStats["elvation"]}}</span></div>
     </div>
+    <div class="footerContainer">
+      <div class="svgObj"></div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -27,10 +29,10 @@ export default {
 body {
   font-size: 14px;
 }
-.v0_3 {
+.stravaCardRoot {
   width: 169px;
   height: 169px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #60A95C;
+  background: rgba(252,82,0,1);
   opacity: 1;
   position: relative;
   top: 0px;
@@ -41,75 +43,146 @@ body {
   border-bottom-right-radius: 14px;
   overflow: hidden;
 }
-.v0_4 {
-  width: 141px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 16px;
-  left: 14px;
-  font-family: PuhuiTi-Light;
-  line-height: 40px;
-  /* font-weight: Light; */
-  font-size: 35px;
-  opacity: 1;
-  text-align: left;
-}
-.v0_5 {
-  width: 24px;
-  /* background: url("../images/v0_5.png"); */
+.dataContainer {
+  width: 75px;
+  height: 169px;
+  padding: 12px 0px;
   opacity: 1;
   position: absolute;
-  top: 112px;
-  left: 14px;
-  border: 1px solid rgba(255,255,255,0.48);
-}
-
-.v0_6 {
-  width: 141px;
-  height: 24px;
-  /* background: url("../images/v0_6.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 131px;
+  top: calc(50% - 169px/2);
   left: 14px;
   overflow: hidden;
 }
-.v0_7 {
-  width: 105px;
-  color: rgba(255,255,255,1);
+.distanceTextView {
+  width: 75px;
+  height: 44px;
+  margin: 2px;
+  opacity: 1;
   position: absolute;
-  top: 2px;
+  top: 12px;
   left: 0px;
-  font-family: PuhuiTi-Bold;
-  /* font-weight: SemiBold; */
+  overflow: hidden;
+}
+.distanceText {
+  width: 26px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: PuHuiTi-Bold;
+  line-height: 18px;
   font-size: 13px;
   opacity: 1;
   text-align: left;
 }
-.v0_8 {
-  width: 24px;
-  height: 24px;
-  background: rgba(255,255,255,1);
+.distanceData {
+  width: 75px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  font-family: PuHuiTi-Regular;
+  font-size: 20px;
+  line-height: 24px;
+  opacity: 1;
+  text-align: left;
+}
+.timeTextView {
+  width: 75px;
+  height: 44px;
+  /* background: url("../images/timeTextView.png"); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 2px;
   opacity: 1;
   position: absolute;
+  top: 62px;
+  left: 0px;
+  overflow: hidden;
+}
+.timeText {
+  width: 26px;
+  color: rgba(255,255,255,1);
+  position: relative;
   top: 0px;
-  left: 117px;
+  left: 0px;
+  font-family: PuHuiTi-Bold;
+  line-height: 18px;
+  font-size: 13px;
+  opacity: 1;
+  text-align: left;
+}
+.timeData {
+  width: 59px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  font-family: PuHuiTi-Regular;
+  font-size: 20px;
+  line-height: 24px;
+  opacity: 1;
+  text-align: left;
+}
+.elvationTextView {
+  width: 75px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 2px;
+  opacity: 1;
+  position: absolute;
+  top: 113px;
+  left: 0px;
+  overflow: hidden;
+}
+.elvationText {
+  width: 26px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: PuhuiTi-Bold;
+  line-height: 18px;
+  font-size: 13px;
+  opacity: 1;
+  text-align: left;
+}
+.elvationData {
+  width: 59px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  font-family: PuhuiTi-Regular;
+  font-size: 20px;
+  opacity: 1;
+  line-height: 24px;
+  text-align: left;
+}
+.footerContainer {
+  width: 24px;
+  height: 24px;
+  background: rgba(255,255,255,0);
+  opacity: 1;
+  position: absolute;
+  top: 131px;
+  left: 131px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   overflow: hidden;
 }
-.v0_9 {
-  width: 14px;
-  height: 14px;
-  background: url("../assets/douban_icon_small.svg");
+.svgObj {
+  width: 17px;
+  height: 24px;
+  background: url("../assets/strava_icon_small.svg");
   opacity: 1;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 0px;
+  left: 3px;
 }
 </style>
