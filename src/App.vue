@@ -46,11 +46,26 @@ export default {
   },
   data() {
     return {
-      doubanStats: {},
+      doubanStats: {
+        "total_data": {
+          "movie": 0,
+          "book": 0,
+          "music": 0,
+        },
+        "2022": {
+          "movie": 0,
+          "book": 0,
+          "music": 0,
+        }
+      },
       type: "movie",
       verb: "看",
       measure: "部",
-      stravaStats: {}
+      stravaStats: {
+        "distance": "",
+        "time": "",
+        "elvation": ""
+      }
     };
   },
 
