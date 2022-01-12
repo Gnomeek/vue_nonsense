@@ -45,6 +45,10 @@ body {
 }
 .dataContainer {
   width: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 169px;
   padding: 12px 0px;
   opacity: 1;
@@ -56,7 +60,6 @@ body {
 .distanceTextView {
   width: 75px;
   height: 44px;
-  margin: 2px;
   opacity: 1;
   position: absolute;
   top: 12px;
