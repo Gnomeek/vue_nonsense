@@ -1,0 +1,15 @@
+// File: custom.scss
+
+// Define your variable overrides here
+$grid-breakpoints: (
+    xs: 300px,
+    sm: 360px,
+    md: 789px,
+    lg: 999px,
+    xl: 1234px
+);
+$grid-gutter-width: 11px;
+
+// Include Bootstrap and BootstrapVue SCSS files
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
