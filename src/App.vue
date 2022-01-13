@@ -3,7 +3,7 @@
     <!-- <b-container> -->
       <b-row class="justify-content-sm-center">
         <b-col sm="auto">
-          <GithubHeatMapBox msg="Welcome to Your Vue.js App"/>
+          <GithubHeatMapBox />
         </b-col>
       </b-row>
 
@@ -62,28 +62,19 @@ export default {
       verb: "看",
       measure: "部",
       stravaStats: {
-        "distance": "",
-        "time": "",
-        "elvation": ""
+        "distance": "0.0 km",
+        "time": "0h 0m",
+        "elvation": "0 m"
       }
     };
   },
 
   mounted() {
     axios
-      .get(`https://qce78q.api.cloudendpoint.cn/getDoubanStats?id=152076608`)
+      .get(`https://qc36tt.api.cloudendpoint.cn/getUserData?id=61dfbb2b3c78380251b30213`)
       .then(response => {
-        this.doubanStats = response.data
-      })
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
-      axios
-      .get(`https://qce78q.api.cloudendpoint.cn/getStravaStats`)
-      .then(response => {
-        this.stravaStats = response.data
+        this.doubanStats = response.data.doubanStats
+        this.stravaStats = response.data.stravaStats
       })
       .catch(error => {
         console.log(error)
@@ -141,11 +132,11 @@ export default {
 #right_widget {
   padding-right: 0px;
   padding-left: 11px;
-  margin-top:20px;
+  margin-top: 22px;
 }
 #left_widget {
   padding-right: 11px;
   padding-left: 0px;
-  margin-top:20px;
+  margin-top: 22px;
 }
 </style>
