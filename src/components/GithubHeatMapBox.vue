@@ -19,7 +19,6 @@ body {
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   background: rgba(251, 241, 199, 1);
-  margin-top: 150px
 }
 .github_stats {
   width: 360px;
