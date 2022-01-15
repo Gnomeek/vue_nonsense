@@ -44,7 +44,7 @@ body {
   overflow: hidden;
 }
 .dataContainer {
-  width: 75px;
+  width: 109px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,7 +58,7 @@ body {
   overflow: hidden;
 }
 .distanceTextView {
-  width: 75px;
+  width: 109px;
   height: 44px;
   opacity: 1;
   position: absolute;
@@ -67,9 +67,9 @@ body {
   overflow: hidden;
 }
 .distanceText {
-  width: 26px;
+  width: 109px;
   color: rgba(255,255,255,1);
-  position: relative;
+  position: absolute;
   top: 0px;
   left: 0px;
   font-family: PuHuiTi-Bold;
@@ -79,7 +79,7 @@ body {
   text-align: left;
 }
 .distanceData {
-  width: 75px;
+  width: 109px;
   color: rgba(255,255,255,1);
   position: absolute;
   top: 20px;
@@ -91,23 +91,23 @@ body {
   text-align: left;
 }
 .timeTextView {
-  width: 75px;
+  width: 109px;
   height: 44px;
   /* background: url("../images/timeTextView.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin: 2px;
+  /* margin: 2px; */
   opacity: 1;
   position: absolute;
-  top: 62px;
+  top: 62.5px;
   left: 0px;
   overflow: hidden;
 }
 .timeText {
-  width: 26px;
+  width: 109px;
   color: rgba(255,255,255,1);
-  position: relative;
+  position: absolute;
   top: 0px;
   left: 0px;
   font-family: PuHuiTi-Bold;
@@ -117,7 +117,7 @@ body {
   text-align: left;
 }
 .timeData {
-  width: 59px;
+  width: 109px;
   color: rgba(255,255,255,1);
   position: absolute;
   top: 20px;
@@ -129,12 +129,12 @@ body {
   text-align: left;
 }
 .elvationTextView {
-  width: 75px;
+  width: 109px;
   height: 44px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin: 2px;
+  /* margin: 2px; */
   opacity: 1;
   position: absolute;
   top: 113px;
@@ -142,7 +142,7 @@ body {
   overflow: hidden;
 }
 .elvationText {
-  width: 26px;
+  width: 109px;
   color: rgba(255,255,255,1);
   position: absolute;
   top: 0px;
@@ -154,7 +154,7 @@ body {
   text-align: left;
 }
 .elvationData {
-  width: 59px;
+  width: 109px;
   color: rgba(255,255,255,1);
   position: absolute;
   top: 20px;
