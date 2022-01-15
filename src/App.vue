@@ -48,23 +48,23 @@ export default {
     return {
       doubanStats: {
         "total_data": {
-          "movie": 0,
-          "book": 0,
-          "music": 0,
+          "movie": '',
+          "book": '',
+          "music": '',
         },
         "2022": {
-          "movie": 0,
-          "book": 0,
-          "music": 0,
+          "movie": '',
+          "book": '',
+          "music": '',
         }
       },
       type: "movie",
       verb: "看",
       measure: "部",
       stravaStats: {
-        "distance": "0.0 km",
-        "time": "0h 0m",
-        "elvation": "0 m"
+        "distance": "0.0km",
+        "time": "0h0m",
+        "elvation": "0m"
       }
     };
   },
@@ -124,7 +124,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  position: absolute;
+  top: 0px; /* Header Height */
+  bottom: 0px; /* Footer Height */
+  background-image: linear-gradient(red, yellow);
+  /* height: 100%;  */
+  height: 100vh;
+  width: 100%;
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
