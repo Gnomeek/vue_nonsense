@@ -1,6 +1,6 @@
 <template>
   <div class="github_box">
-    <img class="github_stats" src="https://github-readme-stats.vercel.app/api?username=gnomeek&hide_title=True&show_icons=True&include_all_commits=True&theme=gruvbox_light&hide_border=True">
+    <img class="github_stats" src="https://github-readme-stats.vercel.app/api?username=gnomeek&hide_title=True&show_icons=True&theme=gruvbox_light&hide_border=True">
   </div>
 </template>
 
@@ -19,6 +19,7 @@ body {
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   background: rgba(251, 241, 199, 1);
+  /* margin-top: 169px; */
 }
 .github_stats {
   width: 360px;
